@@ -17,13 +17,13 @@ Before you begin, make sure you have the following:
 1. **Fork the Repository**
    - Click the "Fork" button on the top right of this repository page to create a copy under your GitHub account.
   
-2. **Clone Your Forked Repository**
+2. **Clone Your Forked Repository (optional)**
    - Clone the forked repository to your local machine to make edits:
      ```bash
      git clone https://github.com/YOUR-USERNAME/portfolio-vanilla-template.git
      ```
 
-3. **Navigate to the Project Directory**
+3. **Navigate to the Project Directory (optional)**
    - Enter the directory to access project files:
      ```bash
      cd portfolio-vanilla-template
