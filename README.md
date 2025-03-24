@@ -9,6 +9,7 @@ To get started, you’ll need to follow a few steps to set up and deploy this te
 ### Prerequisites
 
 Before you begin, make sure you have the following:
+- **A GitHub account**: [Sign up here](https://github.com/) if you don’t have one.
 - **A Netlify account**: [Sign up here](https://www.netlify.com/) if you don’t have one.
 - **Basic HTML, CSS, and JavaScript knowledge**: This template uses a standard React setup (with [Vite](https://vite.dev/)). Deep knowledge of React is not critical, but it will be helpful to have some basic understanding of HTML, CSS, and JavaScript.
 
