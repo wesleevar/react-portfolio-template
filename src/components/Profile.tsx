@@ -21,7 +21,7 @@ export default function Profile() {
         </h1>
         <ul>
           {/* TODO: with your info --> */}
-          <li>ClassNaclassName of 2025</li>
+          <li>Class of 2025</li>
           <li>B.A. in Computer Science, Minor in Economics</li>
           <li>Teaching Assistant for cs412 (Full-Stack Applications)</li>
         </ul>
