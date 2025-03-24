@@ -1,3 +1,9 @@
+/**
+ * `Connect` returns a unordered list (`ul`) of links.
+ *
+ * TODO: replace each `href` for each link
+ * with your personal information.
+ */
 export default function Connect() {
   return (
     <>

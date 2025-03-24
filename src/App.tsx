@@ -2,6 +2,7 @@ import About from "./components/About";
 import Connect from "./components/Connect";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
+import Projects from "./components/Projects";
 import { fadeInTableRows } from "./utils/fadeInTable";
 import { initializeTilt } from "./utils/tilt";
 
@@ -30,8 +31,9 @@ function App() {
         <div className="content-separator"></div>
 
         {/* Projects */}
-        
-        
+        {/* TODO: navigate to `components/Projects.tsx and update all TODO:s */}
+        <Projects />
+
         <div className="content-separator"></div>
 
         {/* Activites and --> */}

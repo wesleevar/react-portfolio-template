@@ -3,6 +3,9 @@ export default function Navbar() {
     <nav className="navbar">
       <ul className="nav-links">
         <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
           <a href="#about">About</a>
         </li>
         <li>
