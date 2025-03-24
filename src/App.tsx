@@ -1,4 +1,4 @@
-import Bio from "./components/Bio";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
 import { fadeInTableRows } from "./utils/fadeInTable";
@@ -24,7 +24,7 @@ function App() {
 
         {/* Short Bio */}
         {/* TODO: navigate to `components/Bio.tsx and update all TODO:s */}
-        <Bio />
+        <About />
 
         <div className="content-separator"></div>
 

@@ -1,4 +1,4 @@
-export default function Bio() {
+export default function About() {
   return (
     <>
       {/* TODO: with your info --> */}
