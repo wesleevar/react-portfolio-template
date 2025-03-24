@@ -20,13 +20,13 @@ Before you begin, make sure you have the following:
 2. **Clone Your Forked Repository (optional)**
    - Clone the forked repository to your local machine to make edits:
      ```bash
-     git clone https://github.com/YOUR-USERNAME/portfolio-vanilla-template.git
+     git clone https://github.com/YOUR-USERNAME/react-portfolio-template.git
      ```
 
 3. **Navigate to the Project Directory (optional)**
    - Enter the directory to access project files:
      ```bash
-     cd portfolio-vanilla-template
+     cd react-portfolio-template
      ```
 
 4. **Customize Your Portfolio**
@@ -38,7 +38,7 @@ Before you begin, make sure you have the following:
 Here’s a quick overview of the project structure:
 
 ```
-/portfolio-vanilla-template
+/react-portfolio-template
 ├── public/                # Static assets (unchanging files like images, icons, etc.)
 │   ├── images/            # (IMPORTANT) Directory with your images (change these)
 │   ├── favicon.ico
@@ -94,15 +94,15 @@ Once your portfolio is set up locally, you can deploy it to Netlify.
    - Select “GitHub” as your deployment method and connect your GitHub account if prompted.
 
 3. **Select Your Repository**
-   - Choose your forked repository `portfolio-vanilla-template` from your GitHub account.
+   - Choose your forked repository `react-portfolio-template` from your GitHub account.
 
 4. **Configure Build Settings**
    - Since this is a static site, you won’t need a build command or any advanced configuration.
    - Click “Deploy Site” to start the deployment process.
 
 5. **Publish and Access Your Portfolio**
-   - Once the deployment is complete, you’ll get a Netlify domain (e.g., `portfolio-vanilla-template.netlify.app`).
-   - **However**, I'd suggest adding a `Site Name` (i.e. `firstname-lastname`) that will be displayed instead of `portfolio-vanilla-template`.
+   - Once the deployment is complete, you’ll get a Netlify domain (e.g., `react-portfolio-template.netlify.app`).
+   - **However**, I'd suggest adding a `Site Name` (i.e. `firstname-lastname`) that will be displayed instead of `react-portfolio-template`.
 
 ### Making Updates
 
