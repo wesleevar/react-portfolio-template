@@ -1,4 +1,4 @@
-interface ProjectProps {
+export interface ProjectProps {
   websiteHref: string;
   imgSrc: string;
   title: string;

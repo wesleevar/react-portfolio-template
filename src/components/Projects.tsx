@@ -1,4 +1,21 @@
-import Project from "./Project";
+import Project, { ProjectProps } from "./Project";
+
+const projects: ProjectProps[] = [
+  // Project 1
+  {
+    websiteHref: "https://github.com/wderocco8/Grub-Gallery",
+    imgSrc: "/images/projects/project1.jpeg",
+    title: "Grub Gallery",
+    description: "Grub Gallery is a dynamic web application built using the MERN stack, integrating Google OAuth, Spoonacular API, and Google Calendar API. This project allows users to discover and personalize dishes and recipes effortlessly.",
+  },
+  // Project 2
+  {
+    websiteHref: "https://github.com/wderocco8/ZipSurf",
+    imgSrc: "/images/projects/project2.jpeg",
+    title: "ZipSurf",
+    description: "ZipSurf is a React based web application designed to enabling users to create, save, delete, and export shortened URLs.",
+  },
+];
 
 /**
  * `Projects` returns a list of `Project` components,
@@ -14,19 +31,14 @@ export default function Projects() {
     <>
       <h2 id="projects">Projects</h2>
       <div className="projects-container">
-        <Project
-          websiteHref="https://github.com/wderocco8/Grub-Gallery"
-          imgSrc="/images/projects/project1.jpeg"
-          title="Grub Gallery"
-          description="Grub Gallery is a dynamic web application built using the MERN stack, integrating Google OAuth, Spoonacular API, and Google Calendar API. This project allows users to discover and personalize dishes and recipes effortlessly."
-        />
-
-        <Project
-          websiteHref="https://github.com/wderocco8/ZipSurf"
-          imgSrc="/images/projects/project2.jpeg"
-          title="ZipSurf"
-          description="ZipSurf is a React based web application designed to enabling users to create, save, delete, and export shortened URLs."
-        />
+        {projects.map((project) => (
+          <Project
+            websiteHref={project.websiteHref}
+            imgSrc={project.imgSrc}
+            title={project.title}
+            description={project.description}
+          />
+        ))}
       </div>
     </>
   );
