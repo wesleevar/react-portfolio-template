@@ -30,19 +30,57 @@ Before you begin, make sure you have the following:
      ```
 
 4. **Customize Your Portfolio**
-   - Open the HTML, CSS, and JavaScript files in the project to personalize your portfolio.
+   - Open the React files (described below in the [customize code](#customize-the-code) section) in the project to personalize your portfolio.
    - Update the content, links, and any other information specific to your profile.
   
 ### Project Structure
 
 Here’s a quick overview of the project structure:
 
+```
+/portfolio-vanilla-template
+├── public/                # Static assets (unchanging files like images, icons, etc.)
+│   ├── images/            # (IMPORTANT) Directory with your images (change these)
+│   ├── favicon.ico
+│   └── vite.svg
+├── src/                   # Main source code for the React app
+│   ├── assets/            # Media assets like images, fonts, and icons
+│   ├── components/        # (IMPORTANT) Reusable UI components (buttons, cards, navbar, etc.)
+│   ├── utils/             # Utility functions and custom hooks
+│   ├── App.tsx            # (IMPORTANT) Root component that defines the app structure
+│   ├── main.tsx           # React entry point, rendering App.tsx
+│   └── index.css          # (IMPORTANT) Global CSS styles
+├── .eslintrc.js           # ESLint configuration for code linting
+├── .gitignore             # Git ignore file
+├── package.json           # Project dependencies and scripts
+├── tsconfig.json          # TypeScript configuration
+└── vite.config.ts         # Vite configuration for building the app
+```
 
-- **`src/`**: Contains all Typescript-React and CSS code for the application.
-- **`public/`**: Contains all **static** files (images, svgs... etc.) that do not need to be altered.
-- **`src/assets/`**: Folder containing images and other media assets that are used at **runtime** and may need..... chat help here
-- **`src/App.tsx`**: (VERY IMPORTANT) Entrypoint to the application, used to render each component.
-- **`index.css`**: Contains all the styling for the template. Customize it to change the look and feel.
+Within each of these files, there are a comments with `TODO:` tags, explaining where to change their contents. As noted above, the important files/folders that you should look at **first** are:
+
+- **`public/images`**
+- **`src/App.tsx`**
+- **`src/components`**
+- **`src/index.css`**
+
+### Customize the Code
+
+#### Replace Images
+
+Replace each image withing the `public/images` directory with images that suit you. Be sure to keep the **SAME** filenames of each image, for example, replacing `public/images/actvities/activity1.jpeg` would look something like this:
+
+1. Find and download an image for that activity.
+2. Ensure the image is of type `JPEG`, if not convert it locally or using a tool such as [Cloud Convert (JPEG Converter)](https://cloudconvert.com/jpeg-converter).
+3. Drag and drop the `JPEG` into the `public/images/activities` folder (you should now have the original `activity1.jpeg` and some `newImage.jpeg`).
+4. **Delete** the original `activity1.jpeg` (right-click on the file, then hit delete).
+5. **Rename** the `newImage.jpeg` (whatever it is currently called) to `activity1.jpeg`.
+6. Repeat steps 1-5 for each image...
+
+#### Replace Content
+
+Replacing content is *technically* easier, but will involve a bit more work overall. To do so, you should navigate to the `src/App.tsx` file and read through it briefly. You will notice a series of "comments" for each component with the keyword `TODO`. Navigate to whichever file the `TODO` says and follow the instructions in that file. It might seem like a bit of an "Easter-egg hunt", but the result is a highly-organized, composable app, not unlike those that are used on real websites!
+
 
 ### Deployment
 
