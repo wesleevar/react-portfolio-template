@@ -1,6 +1,9 @@
 import Project, { ProjectProps } from "./Project";
 
-// TODO: replace each `websiteHref`, `imgSrc`, `title`, and `description with your project information.
+/**
+ * TODO: replace each `websiteHref`, `imgSrc`, `title`, and `description` 
+ * with your project information.
+ */ 
 const projects: ProjectProps[] = [
   // Project 1
   {

@@ -1,5 +1,9 @@
 import Activity, { ActivityProps } from "./Activity";
 
+/**  
+ * TODO: replace each `imgSrc`, `imgAlt`, `title`, `description` 
+ * and `quicklinks` with your project information.
+ */
 const activities: ActivityProps[] = [
   // Activity 1
   {
@@ -107,10 +111,7 @@ const activities: ActivityProps[] = [
  * `Activities` returns a list of `Activity` components,
  * defined in the following component. Be sure to replace
  * all of the information in this file (do not edit `Activity.tsx`
- * only edit `Activities.tsx`)
- *
- * TODO: replace each `websiteHref`, `imgSrc`, `title`, and `description
- * with your project information.
+ * only edit list of `activities` above.)
  */
 export default function Activities() {
   return (
