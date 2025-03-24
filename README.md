@@ -1,6 +1,6 @@
-# Portfolio Vanilla Template
+# React Portfolio Template
 
-Welcome to the **Portfolio Vanilla Template**! This repository is a template to help you quickly set up and customize your personal website or portfolio. Use this template as a base for showcasing your projects, skills, and experience.
+Welcome to the **React Portfolio Template**! This repository is a template to help you quickly set up and customize your personal website or portfolio. Use this template as a base for showcasing your projects, skills, and experience.
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ To get started, you’ll need to follow a few steps to set up and deploy this te
 
 Before you begin, make sure you have the following:
 - **A Netlify account**: [Sign up here](https://www.netlify.com/) if you don’t have one.
-- **Basic HTML, CSS, and JavaScript knowledge**: This template uses vanilla HTML/CSS/JavaScript for customization.
+- **Basic HTML, CSS, and JavaScript knowledge**: This template uses a standard React setup (with [Vite](https://vite.dev/)). Deep knowledge of React is not critical, but it will be helpful to have some basic understanding of HTML, CSS, and JavaScript.
 
 ### Installation
 
@@ -37,11 +37,12 @@ Before you begin, make sure you have the following:
 
 Here’s a quick overview of the project structure:
 
-- **`src/`**: Contains all HTML, JavaScript, and CSS code for the application.
-- **`index.html`**: The main HTML file for your portfolio.
-- **`style.css`**: Contains all the styling for the template. Customize it to change the look and feel.
-- **`script.js`**: JavaScript file to add interactivity.
-- **`assets/`**: Folder containing images and other media assets.
+
+- **`src/`**: Contains all Typescript-React and CSS code for the application.
+- **`public/`**: Contains all **static** files (images, svgs... etc.) that do not need to be altered.
+- **`src/assets/`**: Folder containing images and other media assets that are used at **runtime** and may need..... chat help here
+- **`src/App.tsx`**: (VERY IMPORTANT) Entrypoint to the application, used to render each component.
+- **`index.css`**: Contains all the styling for the template. Customize it to change the look and feel.
 
 ### Deployment
 
