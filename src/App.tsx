@@ -1,6 +1,8 @@
+import Bio from "./components/Bio";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
 import { fadeInTableRows } from "./utils/fadeInTable";
 import { initializeTilt } from "./utils/tilt";
-import Typewriter from "typewriter-effect";
 
 function App() {
   window.onload = () => {
@@ -11,83 +13,18 @@ function App() {
   return (
     <>
       {/* Navigation bar */}
-      <nav className="navbar">
-        <ul className="nav-links">
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#interests">Interests</a>
-          </li>
-          <li>
-            <a href="#connect">Connect</a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       <div className="container">
         {/* Name and Profile --> */}
-        <div className="profile-flex">
-          <div>
-            <h1>
-              {/* TODO: replace `strings` with custom phrases (lines 39-41) --> */}
-              <Typewriter
-                options={{
-                  strings: [
-                    "Heyo peeps, I'm Will.",
-                    "I love to learn.",
-                    "William De Rocco :)",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  delay: 75,
-                }}
-              />
-            </h1>
-            <ul>
-              {/* TODO: with your info --> */}
-              <li>ClassNaclassName of 2025</li>
-              <li>B.A. in Computer Science, Minor in Economics</li>
-              <li>Teaching Assistant for cs412 (Full-Stack Applications)</li>
-            </ul>
-          </div>
-
-          {/* TODO: with your info --> */}
-          <div className="profile tilt">
-            <a
-              href="https://github.com/wderocco8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="profile-img"
-                src="/images/profile/profile.jpeg"
-                alt="profile"
-              />
-            </a>
-          </div>
-        </div>
+        {/* TODO: navigate to `components/Profile.tsx and update all TODO:s */}
+        <Profile />
 
         <div className="content-separator"></div>
 
         {/* Short Bio */}
-        {/* TODO: with your info --> */}
-        <h2 id="about">About me</h2>
-        <p>
-          Hello there, my name is Will, and I'm originally from Manhattan,
-          although I have lived in a few other cities, my family has found our
-          way back there yet again! Currently, I'm a senior and aspiring
-          software engineer studying at Boston University.
-        </p>
-        <p>
-          I absolutely love learning new skills and challenging myself in
-          different aspects. To learn more about what I've been working on, feel
-          free to check out my
-          <a href="https://github.com/wderocco8">GitHub</a> 😁.
-        </p>
+        {/* TODO: navigate to `components/Bio.tsx and update all TODO:s */}
+        <Bio />
 
         <div className="content-separator"></div>
 
