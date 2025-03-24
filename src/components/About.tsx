@@ -1,8 +1,15 @@
-export default function About() {
-  return (
+import { JSX } from "react";
+
+interface AboutData {
+  info: JSX.Element;
+}
+
+/**
+ * TODO: replace `info` with your personal information.
+ */
+const aboutData: AboutData = {
+  info: (
     <>
-      {/* TODO: with your info --> */}
-      <h2 id="about">About me</h2>
       <p>
         Hello there, my name is Will, and I'm originally from Manhattan,
         although I have lived in a few other cities, my family has found our way
@@ -15,6 +22,15 @@ export default function About() {
         free to check out my <a href="https://github.com/wderocco8">GitHub</a>{" "}
         😁.
       </p>
+    </>
+  ),
+};
+
+export default function About() {
+  return (
+    <>
+      <h2 id="about">About me</h2>
+      {aboutData.info}
     </>
   );
 }

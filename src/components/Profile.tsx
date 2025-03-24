@@ -25,6 +25,10 @@ const profileData: ProfileData = {
   imgSrc: "/images/profile/profile.jpeg",
 };
 
+/**
+ * `Profile` returns info about yourself. Be sure to replace
+ * all of the information in the `profileData` above.
+ */
 export default function Profile() {
   return (
     <div className="profile-flex">
