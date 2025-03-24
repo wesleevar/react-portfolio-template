@@ -6,7 +6,7 @@
   --secondary-color: #ffe2d9;
   --text-color: #000000;
   --accent-color: #fddabe87;
-  --nav-background: #99e2fe;
+  --nav-background: hsl(197, 98%, 80%, .7);
   --link-hover-color: #000000;
 
   /* Dark mode colors */
@@ -14,7 +14,7 @@
   --secondary-color-dark: #2c3e50;
   --text-color-dark: #f0f0f0;
   --accent-color-dark: #5f5f5f;
-  --nav-background-dark: #3d4b5d;
+  --nav-background-dark: hsl(214, 21%, 30%, .7);
   --link-hover-color-dark: #ffffff;
 }
 
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   background-image: linear-gradient(to bottom, var(--primary-color), #fddabe87);
   background-color: var(--primary-color);
   min-height: 100vh;
@@ -58,11 +58,25 @@ ul {
 }
 
 .navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
+  position: sticky;
+  top: 1rem;
+  /* margin-top: 20px; */
+  margin: 0 auto;
+  width: fit-content;
   background-color: var(--nav-background);
-  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  z-index: 50;
+  transition: transform 0.3s ease;
+}
+
+.navbar.hidden {
+  transform: translateY(calc(-100% - 1rem)); /* Hide navbar off-screen */
+}
+
+.navbar.visible {
+  transform: translateY(0); /* Show navbar in the normal position */
 }
 
 .nav-links {
@@ -83,7 +97,7 @@ ul {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -253,7 +267,7 @@ ul {
   a {
     color: var(--link-hover-color-dark);
   }
-  
+
   .navbar {
     background-color: var(--nav-background);
   }
@@ -293,41 +307,49 @@ ul {
 .profile {
   position: relative;
 }
-  
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
 
-.profile:hover::after, 
+.profile:hover::after,
 .profile:hover::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 99%;
   width: 100%;
-  background-image: conic-gradient(from var(--angle), #bb4ec4, #f148c8, #2c12ed, #ffa500, #bb4ec4);
+  background-image: conic-gradient(
+    from var(--angle),
+    #bb4ec4,
+    #f148c8,
+    #2c12ed,
+    #ffa500,
+    #bb4ec4
+  );
   top: 0;
   left: 0;
   border-radius: 50%;
   z-index: -1;
   animation: 3s spin linear infinite;
   transform: translate(0, 0);
-  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    background-image 0.5s ease-in-out;
 }
-
 
 .profile:hover::before {
   filter: blur(2rem);
   opacity: 1;
-  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    background-image 0.5s ease-in-out;
 }
 
-@keyframes spin{
-  from{
+@keyframes spin {
+  from {
     --angle: 0deg;
   }
-  to{
+  to {
     --angle: 360deg;
   }
 }

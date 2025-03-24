@@ -226,7 +226,7 @@ function App() {
                   </li>
                 </ul>
               </td>
-            </tr>
+              </tr>
             {/* Add more table rows as needed --> */}
           </table>
         </div>

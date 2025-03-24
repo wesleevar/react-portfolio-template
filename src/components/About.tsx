@@ -12,8 +12,8 @@ export default function About() {
       <p>
         I absolutely love learning new skills and challenging myself in
         different aspects. To learn more about what I've been working on, feel
-        free to check out my
-        <a href="https://github.com/wderocco8">GitHub</a> 😁.
+        free to check out my <a href="https://github.com/wderocco8">GitHub</a>{" "}
+        😁.
       </p>
     </>
   );
