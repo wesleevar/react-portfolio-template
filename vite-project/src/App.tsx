@@ -1,9 +1,11 @@
+import { fadeInTableRows } from "./utils/fadeInTable";
 import { initializeTilt } from "./utils/tilt";
 import Typewriter from "typewriter-effect";
 
 function App() {
   window.onload = () => {
     initializeTilt();
+    fadeInTableRows();
   };
 
   return (
