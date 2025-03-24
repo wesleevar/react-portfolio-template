@@ -1,6 +1,11 @@
-import "./App.css";
+import { initializeTilt } from "./utils/tilt";
+import Typewriter from "typewriter-effect";
 
 function App() {
+  window.onload = () => {
+    initializeTilt();
+  };
+
   return (
     <>
       {/* Navigation bar */}
@@ -22,18 +27,23 @@ function App() {
       </nav>
 
       <div className="container">
-        {/* Name and --> */}
+        {/* Name and Profile --> */}
         <div className="profile-flex">
           <div>
             <h1>
-              {/* TODO: below `data-type` with custom phrases (line 30) --> */}
-              <a
-                className="typewrite"
-                data-period="2000"
-                data-type='[ "Heyo peeps, I&#39;m Will.", "I love to learn.", "William De Rocco :)" ]'
-              >
-                <span className="wrap"></span>
-              </a>
+              {/* TODO: replace `strings` with custom phrases (lines 39-41) --> */}
+              <Typewriter
+                options={{
+                  strings: [
+                    "Heyo peeps, I'm Will.",
+                    "I love to learn.",
+                    "William De Rocco :)",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                }}
+              />
             </h1>
             <ul>
               {/* TODO: with your info --> */}
@@ -91,10 +101,7 @@ function App() {
             className="project-link tilt tilt-small"
           >
             <div className="project">
-              <img
-                src="/images/projects/project1.jpeg"
-                alt="Grub Gallery"
-              />
+              <img src="/images/projects/project1.jpeg" alt="Grub Gallery" />
               <h3>Grub Gallery</h3>
               <p>
                 Grub Gallery is a dynamic web application built using the MERN

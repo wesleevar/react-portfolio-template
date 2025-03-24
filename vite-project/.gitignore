@@ -1,3 +1,5 @@
+# NOTE: This file contains a list of paths/files that should be ignored by Git (see docs for more info https://git-scm.com/docs/gitignore)
+
 # Logs
 logs
 *.log
