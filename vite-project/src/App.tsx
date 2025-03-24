@@ -1,11 +1,6 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import "./App.css";
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
       {/* Navigation bar */}
@@ -57,7 +52,7 @@ function App() {
             >
               <img
                 className="profile-img"
-                src="/assets/images/profile/profile.jpeg"
+                src="/images/profile/profile.jpeg"
                 alt="profile"
               />
             </a>
@@ -97,7 +92,7 @@ function App() {
           >
             <div className="project">
               <img
-                src="/assets/images/projects/grub-gallery.jpeg"
+                src="/images/projects/project1.jpeg"
                 alt="Grub Gallery"
               />
               <h3>Grub Gallery</h3>
@@ -118,7 +113,7 @@ function App() {
             className="project-link tilt tilt-small"
           >
             <div className="project">
-              <img src="/assets/images/projects/zipsurf.png" alt="ZipSurf" />
+              <img src="/images/projects/project2.jpeg" alt="ZipSurf" />
               <h3>ZipSurf</h3>
               <p>
                 ZipSurf is a React based web application designed to enabling
@@ -140,7 +135,7 @@ function App() {
             <tr>
               <td>
                 <img
-                  src="/assets/images/activities/coding.jpeg"
+                  src="/images/activities/activity1.jpeg"
                   alt="coding with David Malin at HackHarvard"
                 />
               </td>
@@ -203,7 +198,7 @@ function App() {
             <tr>
               <td>
                 <img
-                  src="/assets/images/activities/rock-climbing.png"
+                  src="/images/activities/activity2.jpeg"
                   alt="rock climbing at FitRec"
                 />
               </td>
@@ -238,7 +233,7 @@ function App() {
             <tr>
               <td>
                 <img
-                  src="/assets/images/activities/pct.jpeg"
+                  src="/images/activities/activity3.jpeg"
                   alt="tabling with PCT (Phi Chi Theta)"
                 />
               </td>
@@ -281,7 +276,7 @@ function App() {
             <tr>
               <td>
                 <img
-                  src="/assets/images/activities/cooking.jpeg"
+                  src="/images/activities/activity4.jpeg"
                   alt="cooking with my mom"
                 />
               </td>
@@ -364,7 +359,6 @@ function App() {
           </ul>
         </div>
       </div>
-      {/* <script src="js/index.js" async defer></script> */}
     </>
   );
 }
