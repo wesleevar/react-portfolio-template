@@ -1,5 +1,6 @@
 import Project, { ProjectProps } from "./Project";
 
+// TODO: replace each `websiteHref`, `imgSrc`, `title`, and `description with your project information.
 const projects: ProjectProps[] = [
   // Project 1
   {
@@ -21,10 +22,7 @@ const projects: ProjectProps[] = [
  * `Projects` returns a list of `Project` components,
  * defined in the following component. Be sure to replace
  * all of the information in this file (do not edit `Project.tsx`
- * only edit `Projects.tsx`)
- *
- * TODO: replace each `websiteHref`, `imgSrc`, `title`, and `description
- * with your project information.
+ * only edit the list of `projects` above).
  */
 export default function Projects() {
   return (
