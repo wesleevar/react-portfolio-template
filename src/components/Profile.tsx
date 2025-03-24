@@ -4,9 +4,9 @@ interface ProfileData {
   typewriterName: string[];
   graduatingClass: number;
   majorMinor: string;
-  currentPosition?: string;
   websiteHref: string;
   imgSrc: string;
+  currentPosition?: string;
 }
 
 /**
@@ -23,6 +23,7 @@ const profileData: ProfileData = {
   majorMinor: "B.A. in Computer Science, Minor in Economics",
   websiteHref: "https://github.com/wderocco8",
   imgSrc: "/images/profile/profile.jpeg",
+  currentPosition: "Teaching Assistant for cs412 (Full-Stack Applications"
 };
 
 /**

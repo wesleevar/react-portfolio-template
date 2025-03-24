@@ -1,7 +1,7 @@
 import Activity, { ActivityProps } from "./Activity";
 
-/**  
- * TODO: replace each `imgSrc`, `imgAlt`, `title`, `description` 
+/**
+ * TODO: replace each `imgSrc`, `imgAlt`, `title`, `description`
  * and `quicklinks` with your project information.
  */
 const activities: ActivityProps[] = [
@@ -13,14 +13,13 @@ const activities: ActivityProps[] = [
     description: (
       <>
         <p>
-          Even though we have to code constantly for className, this is
-          something that I genuinely enjoy learning in my free time.
+          Even though we have to code constantly for class, this is something
+          that I genuinely enjoy learning in my free time.
         </p>
         <p>
-          Especially for when it comes to
-          <strong>web-development</strong>, where the creative opportunities are
-          literally endless, I find myself spending hours going down rabbit
-          holes of formative exploration.
+          Especially for when it comes to <strong>web-development</strong>,
+          where the creative opportunities are literally endless, I find myself
+          spending hours going down rabbit holes of formative exploration.
         </p>
       </>
     ),
@@ -43,8 +42,7 @@ const activities: ActivityProps[] = [
       <>
         <p>
           I started rock climbing about 2 years ago, and since then, it has been
-          nothing short of amazing (maybe even
-          <em>addicting</em>).
+          nothing short of amazing (maybe even <em>addicting</em>).
         </p>
         <p>
           I love the challenge of finding the optimal "beta" through a problem,
@@ -68,11 +66,10 @@ const activities: ActivityProps[] = [
       <>
         <p>
           I joined PCT (a professional business fraternity) my very first
-          semesert at BU. It was probably one of the most impactfuly decsions
-          I've made in terms of the
-          <strong>friends</strong> made, <strong>skills</strong> acquired, and
-          abundance of unique experiences. (Feel free to check out our website
-          WhyPhi 😜)
+          semesert at BU. It was probably one of the most impactful decsions
+          I've made in terms of the <strong>friends</strong> made,{" "}
+          <strong>skills</strong> acquired, and abundance of unique experiences.
+          (Feel free to check out our website WhyPhi 😜)
         </p>
       </>
     ),
@@ -122,7 +119,7 @@ export default function Activities() {
         <table className="interests-table">
           <tbody>
             {activities.map((activity) => (
-              <Activity 
+              <Activity
                 imgSrc={activity.imgSrc}
                 imgAlt={activity.imgAlt}
                 title={activity.title}
