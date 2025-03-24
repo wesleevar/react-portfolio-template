@@ -1,8 +1,22 @@
+interface ConnectData {
+  email: string;
+  linkedin: string;
+  github?: string;
+}
+
 /**
- * `Connect` returns a unordered list (`ul`) of links.
- *
- * TODO: replace each `href` for each link
+ * TODO: replace each `email`, `linkedin`, and `github`
  * with your personal information.
+ */
+const connectData: ConnectData = {
+  email: "wderocco@bu.edu",
+  linkedin: "https://www.linkedin.com/in/william-derocco/",
+  github: "https://github.com/wderocco8", // TODO: delete this line if you don't have a GitHub (or just create one 🤠)
+};
+
+/**
+ * `Connect` returns a unordered list (`ul`) of links. Be sure to 
+ * replace all of the information in the `connectData` above.
  */
 export default function Connect() {
   return (
@@ -14,25 +28,27 @@ export default function Connect() {
         <ul className="connect-links">
           <li>
             <a
-              href="mailto:wderocco@bu.edu"
+              href={connectData.email}
               target="_blank"
               rel="noopener noreferrer"
             >
               📧 Email
             </a>
           </li>
+          {connectData.github && (
+            <li>
+              <a
+                href={connectData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                💻 GitHub
+              </a>
+            </li>
+          )}
           <li>
             <a
-              href="https://github.com/wderocco8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💻 GitHub
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/william-derocco"
+              href={connectData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
             >

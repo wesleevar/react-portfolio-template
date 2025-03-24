@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 
+/**
+ * `Navbar` returns an unordered list of navbar items. You
+ * don't need to modify this unless you want to change the
+ * section names.
+ */
 export default function Navbar() {
   const [visible, setVisible] = useState(true); // State to control visibility of navbar
 
   useEffect(() => {
     let lastScrollY = 0; // To track the last scroll position
-    
+
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
         // Scrolling down
