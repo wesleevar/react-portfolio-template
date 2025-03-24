@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true); // State to control visibility of navbar
-  let lastScrollY = 0; // To track the last scroll position
-
 
   useEffect(() => {
+    let lastScrollY = 0; // To track the last scroll position
+    
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
         // Scrolling down
@@ -23,7 +23,6 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll); // Clean up the event listener
     };
   }, []);
-
 
   return (
     <nav className={`navbar ${visible ? "visible" : "hidden"}`}>
