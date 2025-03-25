@@ -14,11 +14,13 @@ const USER_BACKGROUND = `
 My Name is William De Rocco.
 
 I am a senior at Boston University studying Computer Science.
-I worked at Rhapsody Health as a Full Stack Software Engineer Intern in the Summer of 2024, where I used Typescript-React, Jest, Dotnet, Docker, Kubernetes... etc.
+I worked at Rhapsody Health as a Full Stack Software Engineer Intern in the Summer of 2024, 
+where I used Typescript-React, Jest, Dotnet, Docker, Kubernetes... etc.
 I'm planning to start working at Fidelity as a LEAP Software Engineer in May of 2025.
 
 I specialize in React, TypeScript, and Node.js development.
-I've built many web applications including an e-commerce platform and a financial dashboard.
+I've built and contributed to many web applications including an attendence and application management
+ system called WhyPhi and, most recently, an open-source Raycast extension called Huggingcast.
 
 I enjoy rock climbing, cooking, running, and yes... coding in my free time.
 I speak English fluently and am intermediate in Italian.
