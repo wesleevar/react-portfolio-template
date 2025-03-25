@@ -52,6 +52,7 @@ Here’s a quick overview of the project structure:
 │   ├── main.tsx           # React entry point, rendering App.tsx
 │   └── index.css          # (IMPORTANT) Global CSS styles
 ├── .eslintrc.js           # ESLint configuration for code linting
+├── .env.local             # (IMPORTANT) NEVER stored on GitHub, only on your computer for secret keys...
 ├── .gitignore             # Git ignore file
 ├── package.json           # Project dependencies and scripts
 ├── tsconfig.json          # TypeScript configuration
@@ -64,6 +65,18 @@ Within each of these files, there are a comments with `TODO:` tags, explaining w
 - **`src/App.tsx`**
 - **`src/components`**
 - **`src/index.css`**
+
+### Configuration
+
+In order to run the Chatbot successfully, you need to define an API key from OpenAI. In the tech class, Vincent temporarily gave you his, but that will not work after today. If you wish to keep this feature, you can use the [OpenAI API](https://openai.com/index/openai-api/) for more information. In the meantime, you should setup as follows:
+
+1. Right click on the very bottom of the file explorer (below any files or folders)
+2. Select `New file...`
+3. Call the file `.env.local` (you MUST match this exactly)
+4. In the terminal, type `git status`
+5. You should not see ANY text like `.env.local`, if you do, ask one of us, or start again from step 1
+5. Paste `VITE_OPENAI_API_KEY="[Vincent's temporary API key]"` into the file and save it
+
 
 ### Customize the Code
 
@@ -81,7 +94,6 @@ Replace each image withing the `public/images` directory with images that suit y
 #### Replace Content
 
 Replacing content is *technically* easier, but will involve a bit more work overall. To do so, you should navigate to the `src/App.tsx` file and read through it briefly. You will notice a series of "comments" for each component with the keyword `TODO`. Navigate to whichever file the `TODO` says and follow the instructions in that file. It might seem like a bit of an "Easter-egg hunt", but the result is a highly-organized, composable app, not unlike those that are used on real websites!
-
 
 ### Deployment
 
