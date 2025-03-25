@@ -23,7 +23,7 @@ const profileData: ProfileData = {
   majorMinor: "B.A. in Computer Science, Minor in Economics",
   websiteHref: "https://github.com/wderocco8",
   imgSrc: "/images/profile/profile.jpeg",
-  currentPosition: "Teaching Assistant for cs412 (Full-Stack Applications"
+  currentPosition: "Teaching Assistant for cs412 (Full-Stack Applications)"
 };
 
 /**
