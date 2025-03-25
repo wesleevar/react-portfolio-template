@@ -68,6 +68,8 @@ Within each of these files, there are a comments with `TODO:` tags, explaining w
 
 ### Configuration
 
+#### Environment Variables
+
 In order to run the Chatbot successfully, you need to define an API key from OpenAI. In the tech class, Vincent temporarily gave you his, but that will not work after today. If you wish to keep this feature, you can use the [OpenAI API](https://openai.com/index/openai-api/) for more information. In the meantime, you should setup as follows:
 
 1. Right click on the very bottom of the file explorer (below any files or folders)
@@ -77,6 +79,20 @@ In order to run the Chatbot successfully, you need to define an API key from Ope
 5. You should not see ANY text like `.env.local`, if you do, ask one of us, or start again from step 1
 5. Paste `VITE_OPENAI_API_KEY="[Vincent's temporary API key]"` into the file and save it
 
+#### Running the Code
+
+To run the code, we are using [GitHub Codespaces](https://github.com/features/codespaces) to avoid having to setup VSCode (though we highly recommend VSCode or some alternative for long-term local development). To run the code, do the following:
+
+1. Navigate to your **fork** of [React Portfolio template](https://github.com/wderocco8/react-portfolio-template)
+2. Click the green `Code` button
+3. Click `+` (Create a codespace on main)
+4. Wait for the codespace to load (it can take a few minutes)
+5. Open the terminal of your codespace and run these commands
+```sh
+npm install    # installs all dependencies
+npm run dev    # runs the server locally
+```
+6. Open the link in the browser
 
 ### Customize the Code
 
