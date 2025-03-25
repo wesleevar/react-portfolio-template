@@ -2,20 +2,22 @@
 
 :root {
   /* Light mode colors */
-  --primary-color: #99e2fe;
-  --secondary-color: #ffe2d9;
-  --text-color: #000000;
-  --accent-color: #fddabe87;
+  --primary-color: hsl(197, 98%, 80%);
+  --secondary-color: hsl(14, 100%, 93%);
+  --text-color: hsl(0, 0%, 0%);
+  --accent-color: hsla(27, 94%, 87%, 0.529);
   --nav-background: hsl(197, 98%, 80%, 0.7);
-  --link-hover-color: #000000;
+  --link-hover-color: hsl(0, 0%, 0%);
+  --chatbot-assistant: hsl(0, 0%, 94%);
 
   /* Dark mode colors */
-  --primary-color-dark: #3d4b5d;
-  --secondary-color-dark: #2c3e50;
-  --text-color-dark: #f0f0f0;
-  --accent-color-dark: #5f5f5f;
+  --primary-color-dark: hsl(214, 21%, 30%);
+  --secondary-color-dark: hsl(210, 29%, 24%);
+  --text-color-dark: hsl(0, 0%, 94%);
+  --accent-color-dark: hsl(0, 0%, 37%);
   --nav-background-dark: hsl(214, 21%, 30%, 0.7);
-  --link-hover-color-dark: #ffffff;
+  --link-hover-color-dark: hsl(0, 0%, 100%);
+  --chatbot-assistant-dark: hsl(0, 0%, 94%);
 }
 
 * {
@@ -104,6 +106,7 @@ ul {
     --accent-color: var(--accent-color-dark);
     --nav-background: var(--nav-background-dark);
     --link-hover-color: var(--link-hover-color-dark);
+    --chatbot-assistant: var(--chatbot-assistant-dark);
   }
 
   body {
