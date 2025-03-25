@@ -23,7 +23,6 @@ const connectData: ConnectData = {
 export default function Connect() {
   return (
     <>
-      {/* TODO: with your info --> */}
       <h2 id="connect">Let's Connect</h2>
       <div className="connect-container">
         <p>Feel free to reach out through any of these platforms:</p>
