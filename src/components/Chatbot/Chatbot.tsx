@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 import React from "react";
@@ -42,6 +42,27 @@ export default function Chatbot() {
     []
   );
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const chatboxRef = useRef<HTMLDivElement>(null);
+
+
+  useEffect(() => {
+    const scrollToBottom = () => {
+      if (isLoading && chatboxRef.current) {
+        chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
+      }
+    };
+  
+    // Scroll to bottom immediately when loading starts
+    scrollToBottom();
+  
+    // Set up an interval to continuously scroll while loading
+    const scrollInterval = setInterval(scrollToBottom, 100);
+  
+    // Clear the interval when loading is false
+    return () => {
+      clearInterval(scrollInterval);
+    };
+  }, [isLoading]);
 
   // Load saved messages from localStorage on component mount
   useEffect(() => {
@@ -150,7 +171,7 @@ export default function Chatbot() {
     <>
       <h2 id="chatbot">Chatbot</h2>
       <div className="chatbot-container">
-        <div className="chatbox-messages">
+        <div className="chatbox-messages" ref={chatboxRef}>
           {messages.length === 0 ? (
             <div className="empty-state">
               Ask me anything about my background or experience!
