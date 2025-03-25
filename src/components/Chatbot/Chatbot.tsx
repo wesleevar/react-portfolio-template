@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Button from "./ui/Button";
-import Input from "./ui/Input";
+import Button from "../ui/Button";
+import Input from "../ui/Input";
 import React from "react";
-import "../Chatbot.css";
+import "./Chatbot.css";
 
 // TODO: replace this with your actual experiences
 const USER_BACKGROUND = `

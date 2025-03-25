@@ -1,10 +1,10 @@
-import About from "./components/About";
-import Activities from "./components/Activities";
-import Chatbot from "./components/Chatbot";
-import Connect from "./components/Connect";
-import Navbar from "./components/Navbar";
-import Profile from "./components/Profile";
-import Projects from "./components/Projects";
+import About from "./components/About/About";
+import Activities from "./components/Activities/Activities";
+import Chatbot from "./components/Chatbot/Chatbot";
+import Connect from "./components/Connect/Connect";
+import Navbar from "./components/Navbar/Navbar";
+import Profile from "./components/Profile/Profile";
+import Projects from "./components/Projects/Projects";
 import { fadeInTableRows } from "./utils/fadeInTable";
 import { initializeTilt } from "./utils/tilt";
 
