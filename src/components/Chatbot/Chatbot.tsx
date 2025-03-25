@@ -3,6 +3,11 @@ import Button from "../ui/Button";
 import Input from "../ui/Input";
 import React from "react";
 import "./Chatbot.css";
+import OpenAI from "openai";
+import {
+  ChatCompletionCreateParamsStreaming,
+  ChatCompletionMessageParam,
+} from "openai/resources.mjs";
 
 // TODO: replace this with your actual experiences
 const USER_BACKGROUND = `
@@ -15,11 +20,16 @@ I enjoy hiking, photography, and playing the piano in my free time.
 I speak English and Italian fluently.
 `;
 
+const client = new OpenAI({
+  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+  dangerouslyAllowBrowser: true,
+});
+
 export default function Chatbot() {
   const [question, setQuestion] = useState<string>("");
-  const [messages, setMessages] = useState<
-    Array<{ role: string; content: string }>
-  >([]);
+  const [messages, setMessages] = useState<Array<ChatCompletionMessageParam>>(
+    []
+  );
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   // Load saved messages from localStorage on component mount
@@ -45,7 +55,10 @@ export default function Chatbot() {
   const handleSend = async () => {
     if (question.trim() === "") return;
 
-    const newMessage = { role: "user", content: question };
+    const newMessage: ChatCompletionMessageParam = {
+      role: "user",
+      content: question,
+    };
     const updatedMessages = [...messages, newMessage];
     setMessages(updatedMessages);
     setIsLoading(true);
@@ -60,7 +73,7 @@ export default function Chatbot() {
       }
 
       // Create messages payload for OpenAI
-      const payload = {
+      const payload: ChatCompletionCreateParamsStreaming = {
         model: "gpt-4o", // You can change this to any OpenAI model
         messages: [
           {
@@ -76,33 +89,27 @@ export default function Chatbot() {
         ],
         temperature: 0.7,
         max_tokens: 500,
+        stream: true,
       };
 
-      // Call OpenAI API
-      const response = await fetch(
-        "https://api.openai.com/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${apiKey}`,
-          },
-          body: JSON.stringify(payload),
+      const stream = await client.chat.completions.create(payload);
+
+      // New message that is currently being streamed
+      const assistantMessage: ChatCompletionMessageParam = {
+        role: "assistant",
+        content: "",
+      };
+      setMessages((prevMessages) => [...prevMessages, assistantMessage]);
+
+      for await (const chunk of stream) {
+        if (chunk.choices[0].delta.content) {
+          assistantMessage.content += chunk.choices[0].delta.content;
+          setMessages((prevMessages) => {
+            const newMessages = [...prevMessages];
+            newMessages[newMessages.length - 1] = { ...assistantMessage };
+            return newMessages;
+          });
         }
-      );
-
-      if (!response.ok) {
-        console.log("response", response.status, response.json());
-      }
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessages([
-          ...updatedMessages,
-          { role: "assistant", content: data.choices[0].message.content },
-        ]);
-      } else {
-        throw new Error(data.error?.message || "API request failed");
       }
     } catch (error) {
       console.error("Error calling OpenAI API:", error);
@@ -139,14 +146,9 @@ export default function Chatbot() {
           ) : (
             messages.map((msg, index) => (
               <div key={index} className={`message ${msg.role}`}>
-                <div className="message-content">{msg.content}</div>
+                <div className="message-content">{msg.content?.toString()}</div>
               </div>
             ))
-          )}
-          {isLoading && (
-            <div className="message assistant">
-              <div className="message-content loading">Thinking...</div>
-            </div>
           )}
         </div>
         <div className="chatbox-input" onKeyDown={handleKeyPress}>
