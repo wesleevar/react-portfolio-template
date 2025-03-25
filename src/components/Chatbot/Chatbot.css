@@ -1,59 +1,81 @@
 .chatbot-container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 400px;
-  }
-  
-  .chatbox-messages {
-    flex: 1;
-    padding: 1rem;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .chatbox-input {
-    display: flex;
-    padding: 0.5rem;
-    background: #f5f5f5;
-    border-top: 1px solid #ccc;
-  }
-  
-  .message {
-    max-width: 80%;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .user {
-    align-self: flex-end;
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .assistant {
-    align-self: flex-start;
-    background-color: #f0f0f0;
-    color: #333;
-  }
-  
-  .empty-state {
-    text-align: center;
-    color: #777;
-    margin: auto;
-  }
-  
-  .loading {
-    font-style: italic;
-  }
-  
-  .button-wrapper.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 10px;
+}
+
+.chatreply {
+  width: 60%;
+}
+
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.chatbox-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chatbox-input {
+  display: flex;
+  padding: 0.5rem;
+  background: #f5f5f5;
+  border-top: 1px solid #ccc;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+}
+
+.assistant {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.empty-state {
+  text-align: center;
+  color: #777;
+  margin: auto;
+}
+
+.loading {
+  font-style: italic;
+}
+
+.button-wrapper.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
