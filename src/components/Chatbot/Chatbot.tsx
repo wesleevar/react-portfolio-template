@@ -9,17 +9,26 @@ import {
   ChatCompletionMessageParam,
 } from "openai/resources.mjs";
 
-// TODO: replace this with your actual experiences
+// TODO: replace this with your actual experiences (you can write MUCH more than I did...)
 const USER_BACKGROUND = `
+My Name is William De Rocco.
+
 I am a senior at Boston University studying Computer Science.
-I worked at Google as a Software Engineer from 2019-2021, focusing on frontend development.
-I'm currently working at a fintech startup as a Senior Developer since 2021.
+I worked at Rhapsody Health as a Full Stack Software Engineer Intern in the Summer of 2024, where I used Typescript-React, Jest, Dotnet, Docker, Kubernetes... etc.
+I'm planning to start working at Fidelity as a LEAP Software Engineer in May of 2025.
+
 I specialize in React, TypeScript, and Node.js development.
-I've built several web applications including an e-commerce platform and a financial dashboard.
-I enjoy hiking, photography, and playing the piano in my free time.
-I speak English and Italian fluently.
+I've built many web applications including an e-commerce platform and a financial dashboard.
+
+I enjoy rock climbing, cooking, running, and yes... coding in my free time.
+I speak English fluently and am intermediate in Italian.
 `;
 
+/**
+ * TODO: it is worth noting that `dangerouslyAllowBrowser: true` is NOT a safe configuration
+ * for real websites. It is fine for temporary personal projects, but if you want to use this in
+ * the long run, you should create a BACKEND and call the OpenAI client there.
+ */
 const client = new OpenAI({
   apiKey: import.meta.env.VITE_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
@@ -83,7 +92,8 @@ export default function Chatbot() {
             ${USER_BACKGROUND}
             
             Always respond in first person as if you are the user. Keep responses concise and relevant.
-            If asked about something not covered in the user background, politely mention that you don't have that information.`,
+            If asked about something not covered in the user background, politely mention that you don't have 
+            that information, it is CRUCIAL that you do not violate this condition.`,
           },
           ...updatedMessages,
         ],
@@ -150,6 +160,11 @@ export default function Chatbot() {
               </div>
             ))
           )}
+          {/* {isLoading && (
+            <div className="message assistant">
+              <div className="message-content loading">Thinking...</div>
+            </div>
+          )} */}
         </div>
         <div className="chatbox-input" onKeyDown={handleKeyPress}>
           <Input
