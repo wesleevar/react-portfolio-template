@@ -20,6 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 80%;
 }
 
 .chatbox-input {
@@ -58,7 +59,6 @@
 .assistant {
   align-self: flex-start;
   background-color: var(--chatbot-assistant);
-  /* color: #333; */
 }
 
 .empty-state {
