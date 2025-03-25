@@ -9,6 +9,7 @@ import { fadeInTableRows } from "./utils/fadeInTable";
 import { initializeTilt } from "./utils/tilt";
 
 function App() {
+  // Initialize card-tilt and table-fade effects on window load
   window.onload = () => {
     initializeTilt();
     fadeInTableRows();
@@ -21,37 +22,37 @@ function App() {
 
       <div className="container">
         {/* Name and Profile --> */}
-        {/* TODO: navigate to `components/Profile.tsx and update all TODO:s */}
+        {/* TODO: navigate to `components/Profile/Profile.tsx and update all TODO:s */}
         <Profile />
 
         <div className="content-separator"></div>
 
         {/* Short Bio */}
-        {/* TODO: navigate to `components/Bio.tsx and update all TODO:s */}
+        {/* TODO: navigate to `components/About/About.tsx and update all TODO:s */}
         <About />
 
         <div className="content-separator"></div>
 
         {/* Projects */}
-        {/* TODO: navigate to `components/Projects.tsx and update all TODO:s */}
+        {/* TODO: navigate to `components/Projects/Projects.tsx and update all TODO:s */}
         <Projects />
 
         <div className="content-separator"></div>
 
         {/* Activites and --> */}
-        {/* TODO: navigate to `components/Activities.tsx and update all TODO:s */}
+        {/* TODO: navigate to `components/Activities/Activities.tsx and update all TODO:s */}
         <Activities />
 
         <div className="content-separator"></div>
 
         {/* connect Section */}
-        {/* TODO: navigate to `components/Connect.tsx and update all TODO:s */}
+        {/* TODO: navigate to `components/Connect/Connect.tsx and update all TODO:s */}
         <Connect />
 
         <div className="content-separator"></div>
 
         {/* chatbot Section */}
-        {/* TODO: navigate to `components/Chatbot.tsx and update all TODO:s */}
+        {/* TODO: navigate to `components/Chatbot/Chatbot.tsx and update all TODO:s */}
         <Chatbot />
       </div>
     </>
