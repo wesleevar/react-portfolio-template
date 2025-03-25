@@ -1,6 +1,6 @@
 import About from "./components/About";
 import Activities from "./components/Activities";
-import Chatbot from "./components/ChatBot";
+import Chatbot from "./components/Chatbot";
 import Connect from "./components/Connect";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
