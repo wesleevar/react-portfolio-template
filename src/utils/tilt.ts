@@ -1,10 +1,10 @@
 /******************** tilt.ts -> source: https://www.youtube.com/watch?v=zyBjfoJhlC4&ab_channel=TuatTranAnh ********************/
 
-const tiltMove = (x, y) =>
+const tiltMove = (x: number, y: number) =>
   `perspective(500px) rotateX(${x}deg) rotateY(${y}deg)`; // Reduced scale for subtle effect
 
 export const initializeTilt = async () => {
-  const tiltEls = document.querySelectorAll(".tilt");
+  const tiltEls = document.querySelectorAll<HTMLElement>(".tilt");
 
   tiltEls.forEach((tilt) => {
     const height = tilt.clientHeight;
