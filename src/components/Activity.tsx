@@ -1,6 +1,5 @@
 import { JSX } from "react";
 
-
 export interface ActivityProps {
   imgSrc: string;
   imgAlt: string;
@@ -41,7 +40,7 @@ export default function Activity({
         <ul>
           {quicklinks.map((quicklink) => (
             <a href={quicklink.href} target="_blank" rel="noopener noreferrer">
-              {quicklink.name}
+              <li>{quicklink.name}</li>
             </a>
           ))}
         </ul>

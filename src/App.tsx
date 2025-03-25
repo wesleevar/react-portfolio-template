@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Activities from "./components/Activities";
+import Chatbot from "./components/ChatBot";
 import Connect from "./components/Connect";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
@@ -46,6 +47,10 @@ function App() {
         {/* connect Section */}
         {/* TODO: navigate to `components/Connect.tsx and update all TODO:s */}
         <Connect />
+
+        {/* chatbot Section */}
+        {/* TODO: navigate to `components/Chatbot.tsx and update all TODO:s */}
+        <Chatbot />
       </div>
     </>
   );
