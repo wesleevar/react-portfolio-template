@@ -1,4 +1,4 @@
-import "./Connect.css"
+import "./Connect.css";
 
 interface ConnectData {
   email: string;
@@ -17,7 +17,7 @@ const connectData: ConnectData = {
 };
 
 /**
- * `Connect` returns a unordered list (`ul`) of links. Be sure to 
+ * `Connect` returns a unordered list (`ul`) of links. Be sure to
  * replace all of the information in the `connectData` above.
  */
 export default function Connect() {
@@ -29,13 +29,7 @@ export default function Connect() {
         <p>Feel free to reach out through any of these platforms:</p>
         <ul className="connect-links">
           <li>
-            <a
-              href={connectData.email}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              📧 Email
-            </a>
+            <a href={`mailto:${connectData.email}`}>📧 Email</a>
           </li>
           {connectData.github && (
             <li>
