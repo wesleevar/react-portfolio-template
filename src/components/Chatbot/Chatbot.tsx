@@ -29,6 +29,8 @@ I speak English fluently and am intermediate in Italian.
  * for real websites. It is fine for temporary personal projects, but if you want to use this in
  * the long run, you should create a BACKEND and call the OpenAI client there.
  */
+
+console.log("API keu", import.meta.env.VITE_OPENAI_API_KEY)
 const client = new OpenAI({
   apiKey: import.meta.env.VITE_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
