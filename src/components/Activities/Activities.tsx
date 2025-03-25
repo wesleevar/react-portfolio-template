@@ -1,4 +1,5 @@
 import Activity, { ActivityProps } from "./Activity";
+import "./Activities.css"
 
 /**
  * TODO: replace each `imgSrc`, `imgAlt`, `title`, `description`

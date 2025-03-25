@@ -1,4 +1,5 @@
 import Project, { ProjectProps } from "./Project";
+import "./Projects.css"
 
 /**
  * TODO: replace each `websiteHref`, `imgSrc`, `title`, and `description` 

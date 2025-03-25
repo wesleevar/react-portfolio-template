@@ -1,4 +1,5 @@
 import Typewriter from "typewriter-effect";
+import "./Profile.css"
 
 interface ProfileData {
   typewriterName: string[];

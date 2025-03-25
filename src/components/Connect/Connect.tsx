@@ -1,3 +1,5 @@
+import "./Connect.css"
+
 interface ConnectData {
   email: string;
   linkedin: string;
