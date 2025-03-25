@@ -48,6 +48,8 @@ function App() {
         {/* TODO: navigate to `components/Connect.tsx and update all TODO:s */}
         <Connect />
 
+        <div className="content-separator"></div>
+
         {/* chatbot Section */}
         {/* TODO: navigate to `components/Chatbot.tsx and update all TODO:s */}
         <Chatbot />

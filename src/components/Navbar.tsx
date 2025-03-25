@@ -47,6 +47,9 @@ export default function Navbar() {
         <li>
           <a href="#connect">Connect</a>
         </li>
+        <li>
+          <a href="#chatbot">Chatbot</a>
+        </li>
       </ul>
     </nav>
   );

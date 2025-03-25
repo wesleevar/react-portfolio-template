@@ -4,17 +4,15 @@ import Input from "./ui/Input";
 
 export default function Chatbot() {
   const [question, setQuestion] = useState("");
-  // const [messages, setMessages] = useState<string[]>([]);
 
   const handleSend = () => {
     if (question.trim() === "") return;
-    // setMessages([...messages, `You: ${question}`]);
     setQuestion("");
   };
 
   return (
     <>
-      <h2 id="projects">Chatbot</h2>
+      <h2 id="chatbot">Chatbot</h2>
       <div className="chatbot-container">
         <div className="chatbox">
           <Input
@@ -23,6 +21,9 @@ export default function Chatbot() {
             onChange={(e) => setQuestion(e.target.value)}
           />
           <Button onClick={handleSend}>Send</Button>
+        </div>
+        <div className="chatreply">
+          {/* TODO: chatbot reply should go here */}
         </div>
       </div>
     </>
