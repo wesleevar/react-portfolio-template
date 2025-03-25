@@ -17,7 +17,7 @@
   --accent-color-dark: hsl(0, 0%, 37%);
   --nav-background-dark: hsl(214, 21%, 30%, 0.7);
   --link-hover-color-dark: hsl(0, 0%, 100%);
-  --chatbot-assistant-dark: hsl(0, 0%, 94%);
+  --chatbot-assistant-dark: hsl(0, 0%, 37%);
 }
 
 * {

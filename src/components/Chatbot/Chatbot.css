@@ -28,7 +28,6 @@
   width: 80%;
   border-radius: 4px;
   background: var(--chatbot-assistant);
-
   gap: 10px;
 }
 
@@ -59,12 +58,11 @@
 .assistant {
   align-self: flex-start;
   background-color: var(--chatbot-assistant);
-  color: #333;
+  /* color: #333; */
 }
 
 .empty-state {
   text-align: center;
-  /* color: #777; */
   margin: auto;
 }
 
