@@ -37,6 +37,11 @@ export default function Chatbot() {
     }
   }, [messages]);
 
+  const clearMessages = async () => {
+    localStorage.setItem("chatbot_messages", JSON.stringify([]));
+    setMessages([]);
+  };
+
   const handleSend = async () => {
     if (question.trim() === "") return;
 
@@ -168,7 +173,7 @@ export default function Chatbot() {
                 Send
               </Button>
             </span>
-            <Button onClick={() => {}}>Clear</Button>
+            <Button onClick={() => clearMessages()}>Clear</Button>
           </div>
         </div>
       </div>
