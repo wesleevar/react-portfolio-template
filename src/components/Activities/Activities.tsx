@@ -1,4 +1,5 @@
 import Activity, { ActivityProps } from "./Activity";
+import "./Activities.css";
 
 /**
  * TODO: replace each `imgSrc`, `imgAlt`, `title`, `description`
@@ -118,8 +119,9 @@ export default function Activities() {
       <div className="interests-table-container">
         <table className="interests-table">
           <tbody>
-            {activities.map((activity) => (
+            {activities.map((activity, index) => (
               <Activity
+                key={index}
                 imgSrc={activity.imgSrc}
                 imgAlt={activity.imgAlt}
                 title={activity.title}

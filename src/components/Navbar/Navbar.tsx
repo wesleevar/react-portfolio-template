@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Navbar.css"
 
 /**
  * `Navbar` returns an unordered list of navbar items. You
