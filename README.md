@@ -88,10 +88,10 @@ To run the code, we are using [GitHub Codespaces](https://github.com/features/co
 3. Click `+` (Create a codespace on main)
 4. Wait for the codespace to load (it can take a few minutes)
 5. Open the terminal of your codespace and run these commands
-```sh
-npm install    # installs all dependencies
-npm run dev    # runs the server locally
-```
+   ```sh
+   npm install    # installs all dependencies
+   npm run dev    # runs the server locally
+   ```
 6. Open the link in the browser
 
 ### Customize the Code
